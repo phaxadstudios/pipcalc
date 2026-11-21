@@ -1,0 +1,55 @@
+{
+  "name": "pipcalc",
+  "version": "1.0.0",
+  "description": "Pip value, position size, risk/reward and drawdown maths for forex, gold, indices and crypto traders. Zero dependencies, with a CLI.",
+  "keywords": [
+    "forex",
+    "trading",
+    "pip",
+    "pip-value",
+    "position-size",
+    "lot-size",
+    "risk-management",
+    "risk-reward",
+    "calculator",
+    "gold",
+    "xauusd",
+    "cli"
+  ],
+  "homepage": "https://github.com/phaxadstudios/pipcalc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phaxadstudios/pipcalc.git"
+  },
+  "bugs": "https://github.com/phaxadstudios/pipcalc/issues",
+  "license": "MIT",
+  "author": "Candleben (https://candleben.com)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "pipcalc": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
